@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head> 
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="nav-brand">Do Desk</div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="notification-wrapper">
+        <a href="#" id="notificationsIcon">&#128276;  <span id="notificationBadge" class="badge"></span> <!-- Red dot --></a> 
+        <div id="notificationsDropdown" class="dropdown"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Dashboard</h2>
+
+    <h3>Create New Task</h3>
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Task Title" required />
+      <textarea id="description" placeholder="Task Description"></textarea>
+      <input type="datetime-local" id="deadline" required />
+      <select id="assignee"></select>
+      <select id="category">
+        <option value="">-- Select Category --</option>
+        <option value="Assignment">Assignment</option>
+        <option value="Minor Project">Minor Project</option>
+        <option value="Major Project">Major Project</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <h3>Your Tasks</h3>
+    <div id="taskSections"></div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
